@@ -1,8 +1,35 @@
 # lifeos-template
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Made with Claude Code](https://img.shields.io/badge/Made_with-Claude_Code-d97706)](https://docs.claude.com/en/docs/claude-code/overview)
+[![Works with Codex CLI](https://img.shields.io/badge/Works_with-Codex_CLI-10a37f)](https://developers.openai.com/codex/cli)
+[![Version](https://img.shields.io/github/v/tag/huasan2025/lifeos-template?label=version)](https://github.com/huasan2025/lifeos-template/tags)
+
+> 🌐 **English version**: [README.en.md](./README.en.md)
+
+<!-- TODO: 顶部 hero image (assets/hero.png) — 见 03-Projects/lifeos-template/articles/2026-05-11-readme-图prompts.md 图 1 -->
+
 > 一个**有专属 AI 助理 + 自我进化机制**的个人操作系统模板。一行 `npx` 命令，10 分钟拥有你自己的版本。
 
 不是知识库，不是第二大脑。是一个**服务现实决策**的人生与项目操作系统——帮你聚焦真正的战略问题，把日常推进绑在长期赌注上。
+
+---
+
+## Why I built this
+
+我从 2026 年 1 月开始构建这套个人 OS。中间**彻底重构过 5 轮**——每次重构都是因为发现"这个结构还不够服务我真正的决策"。到现在用着越来越顺手，所以决定把它开源。
+
+它解决我几个非常实际的问题：
+
+- **每天开始工作前不再花 15 分钟梳理"从哪开始"** —— `/go` 一条命令，AI 读完我的状态告诉我今天最该做的 3 件事。
+- **我需要一个真正了解我的 AI 助理** —— 不受 ChatGPT 网页那种上下文限制，也不依赖黑盒的记忆系统。所有上下文都在 Obsidian 文件里，我可见、可改、可 git 追溯。
+- **我想真正实现"过程即内容"** —— 把时间精力聚焦在构建产品上，让做事的过程自然变成文章和视频素材，不用专门腾时间"做内容"。
+
+还有其他——比如自我进化机制、跨项目复用、Problem ≤3 的硬约束等等。完整故事会陆续写出来。
+
+<!-- TODO: Why 段配图 (assets/why-i-built.png) — 见图 prompts 图 2 -->
+
+我每天还在用 HuaSan-LifeOS。lifeos-template 是它的可分享版本。
 
 ---
 
