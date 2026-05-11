@@ -1,0 +1,16 @@
+{
+  "showLineNumber": false,
+  "attachmentFolderPath": "Web-Clipper/clipper-images",
+  "alwaysUpdateLinks": true,
+  "userIgnoreFilters": [
+    "node_modules/",
+    "dist/",
+    "build/",
+    ".next/",
+    "coverage/",
+    "vendor/",
+    "/06-Conversations/",
+    "02-Problems/mermaid-ai-studio/"
+  ],
+  "promptDelete": false
+}

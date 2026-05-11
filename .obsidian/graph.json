@@ -1,0 +1,65 @@
+{
+  "collapse-filter": false,
+  "search": "-path:\"02-Problems/mermaid-ai-studio/\" -path:\"03-Projects/${USER_NAME}的OPC/AI_Coding_Course/入门-01_Vibe_Coding_PPT/ppt-tool/\" -path:\"03-Projects/epub-book-pipeline/books/\" -path:\"03-Projects/epub-book-pipeline/source/\" -path:\"Web-Clipper/\"",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": false,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:\"90-System/\" OR path:\"91-ChenZhou/\" OR file:\"PROGRESS\"",
+      "color": {
+        "a": 1,
+        "rgb": 8019194
+      }
+    },
+    {
+      "query": "path:\"02-Problems/\"",
+      "color": {
+        "a": 1,
+        "rgb": 14964526
+      }
+    },
+    {
+      "query": "path:\"03-Projects/${USER_NAME}的OPC/\"",
+      "color": {
+        "a": 1,
+        "rgb": 3050327
+      }
+    },
+    {
+      "query": "path:\"03-Projects/\"",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "path:\"04-Outputs/\"",
+      "color": {
+        "a": 1,
+        "rgb": 15902017
+      }
+    },
+    {
+      "query": "path:\"00-Dashboard/\" OR path:\"01-Inbox/\" OR path:\"05-Daily/\"",
+      "color": {
+        "a": 1,
+        "rgb": 8026746
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": false,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 0.43073102314507206,
+  "close": true
+}

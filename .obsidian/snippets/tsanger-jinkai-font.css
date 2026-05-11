@@ -1,0 +1,28 @@
+/* TsangerJinKai02 字体配置 */
+/* 使用方法：在 设置 → 外观 → CSS 代码片段 中启用此片段 */
+
+/* 全局使用 TsangerJinKai02 字体 */
+body {
+  --font-text: 'TsangerJinKai02', '楷体', 'KaiTi', serif !important;
+}
+
+/* 仅编辑器使用 */
+.markdown-source-view {
+  font-family: 'TsangerJinKai02', '楷体', 'KaiTi', serif !important;
+}
+
+/* 仅阅读视图使用 */
+.markdown-preview-view {
+  font-family: 'TsangerJinKai02', '楷体', 'KaiTi', serif !important;
+}
+
+/* 代码块保持原字体 */
+code, pre {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+}
+
+/* 标题使用加粗变体（如果有的话） */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'TsangerJinKai02', '楷体', 'KaiTi', serif !important;
+  font-weight: bold;
+}
