@@ -1,60 +1,182 @@
 # lifeos-template
 
-> Personal life & project OS template — fork to start your own AI-assisted vault.
+> 一个**有专属 AI 助理 + 自我进化机制**的个人操作系统模板。fork 一下，10 分钟拥有你自己的版本。
 
-基于 Obsidian + Claude Code 的个人操作系统模板。从复盘 → 战略问题 → 项目执行 → 经验沉淀，闭环管理。
+不是知识库，不是第二大脑。是一个**服务现实决策**的人生与项目操作系统——帮你聚焦真正的战略问题，把日常推进绑在长期赌注上。
 
-## 目标用户
+---
 
-- 想用 AI 提效的独立创业者 / 自由职业者 / 知识工作者
-- 愿意装 Claude Code（一次性，看教程视频跟着做就行）
-- 不要求会编程，但需要基本终端命令熟悉度（`cd` `ls` 这种）
+## 你能拿到什么
 
-## 它是什么
+打开 Claude Code（或 Codex CLI），输入 `/go`，AI 助理立刻告诉你**今天最该做这 3 件事**。
 
-一个**结构化的 Obsidian vault** + **AI 助理人格 + 命令系统**。包括：
+不是因为它读了你的 todo list——是因为它记得：
+- 你是谁、在做什么、瓶颈在哪
+- 你的 ≤3 个战略问题、当前主项目
+- 上次会话停在哪、踩了什么坑、下一步是什么
 
-- **Problems**（≤3 个长期赌注）→ **Projects**（执行容器）→ **Library**（跨项目沉淀）三层模型
-- **AI 助理**（你给它取名、定义人格）通过 4 个命令陪伴你：
-  - `/init-life-os` — onboarding，4 步访谈生成你的定制化配置
-  - `/go` — 恢复上下文，告诉你今天最该做什么
-  - `/save` — 保存进度 + AI 自我进化检查
-  - `/today` — 基于上下文给出今日聚焦
-- **过程即内容**：项目过程产物（笔记/文章/视频稿）跟项目走，自然变成可发布内容
+不需要每次开新会话重新解释一遍自己。
+
+---
+
+## 5 个核心价值
+
+### 1. 专属 AI 助理（你给它取名、定义人格）
+
+跑一次 `/init-life-os`，4 步访谈生成你的 AI 助理：
+
+- 取一个你喜欢的名字（中文/英文都行）
+- 选风格：温暖 vs 理性，主动反问 vs 安静陪伴
+- 它的角色、行为约定全部写进 `90-System/Soul.md`，你随时能改
+
+不是套壳——而是 AI 真的按这个人格响应你。
+
+### 2. 一个命令开始今天：`/go`
+
+```
+你: /go
+AI: 上次你停在 X 项目的 Y 问题，已 PIVOT 到 Z 方案。
+    今天 3 件事：
+    1. 发推文 #2 + demo（W1 生死线还差 9 天）
+    2. 找 3-5 个用户私聊试用（48h 反馈窗）
+    3. 业务基本功：拆 1 产品 + 1 landing（45 min）
+    今天先做哪件？
+```
+
+AI 读了你的 Identity / Soul / PROGRESS，从**你的实际状态**判断，不是从空气里。
+
+### 3. AI 自我进化机制（91-ChenZhou/）
+
+这是这个模板最特别的地方——**AI 会从被你纠正的错误中学习**。
+
+每次你说"不对，应该是..."，AI 会：
+1. 承认（不辩解）
+2. 归因（错在哪：信息不足？判断偏差？角色越位？）
+3. 把规则写进 `91-ChenZhou/Evolution Rules.md` 的"行为修正清单"
+
+下次会话开始时，AI 自动读这个文件，**这些纠正立即生效**。你不用反复教 AI 同样的事。
+
+### 4. Problem → Project → Library 三层模型
+
+```
+Problems（≤3 个长期赌注）
+  ├─ Project A（解决 Problem 1 的尝试）
+  │     ├─ process/（执行过程踩坑笔记）
+  │     └─ articles/（顺手产出的文章/视频稿）
+  └─ Project B（解决 Problem 2 的尝试）
+
+Library（跨项目复用的资产）
+  ├─ howto: 一次性问题的解决经验
+  ├─ insight: 从经验提炼的独立洞见
+  ├─ decode: 外部内容的消化产出
+  └─ analysis: 主题/案例的系统拆解
+```
+
+- **≤3 硬上限**：超出说明还没收敛到真正的战略赌注
+- **每个 Project 必须锚定一个 Problem**（双链强制）：防止做了一堆事但不知道为什么
+- **Library 不堆积**：用 frontmatter type 区分，不开子目录
+
+### 5. 过程即内容
+
+项目过程中写的笔记、文章稿、视频稿——**全部留在项目目录里**。
+
+没有专门的 "Outputs" 目录。做事本身就在产内容。完成度高的内容手动加到 `00-Dashboard/Published.md` 顶部，保留 ship 的仪式感。
+
+---
+
+## 目录结构
+
+```
+lifeos-template/
+├── 00-Dashboard/        当天操作入口（Published.md 已发布作品索引）
+├── 02-Problems/         长期战略问题（≤3）
+│   └── EXAMPLE-Problem.md    示范文件，看完可删
+├── 03-Projects/         问题的解决容器
+│   └── example-project/      示范项目，看完可删
+│       ├── process/          执行过程笔记
+│       └── articles/         过程中产出的内容
+├── 04-Library/          跨项目复用资产
+│   ├── EXAMPLE-howto.md
+│   ├── EXAMPLE-insight.md
+│   ├── EXAMPLE-decode.md
+│   └── EXAMPLE-analysis.md
+├── 90-System/           系统级机制
+│   ├── Identity.md           你是谁（onboarding 生成）
+│   ├── Soul.md               AI 助理人格（onboarding 生成）
+│   ├── Commands.md           可用命令说明
+│   └── PROGRESS-ARCHIVE.md   旧进度归档
+├── 91-ChenZhou/         AI 助理的进化机制
+│   ├── Evolution Rules.md    自我进化规则 + 行为修正清单
+│   ├── Growth Log.md         学到了什么
+│   └── Observations.md       观察到了什么
+├── 99-Archive/          冷库（AI 默认不读）
+├── .claude/commands/    5 个核心命令
+│   ├── init-life-os.md       onboarding
+│   ├── go.md                 恢复上下文
+│   ├── today.md              今日聚焦
+│   ├── save.md               保存进度 + AI 自检
+│   └── capture.md            提取写作素材
+├── CLAUDE.md            Claude Code 入口
+├── AGENTS.md            Codex CLI 入口（内容同 CLAUDE.md）
+└── PROGRESS.md          当前进度（每次 /save 更新）
+```
+
+---
+
+## 5 个核心命令
+
+| 命令 | 作用 | 何时用 |
+|---|---|---|
+| `/init-life-os` | 4 步访谈生成 Identity + Soul + 占位符替换 | 拿到 fresh fork 之后跑一次 |
+| `/go` | 读 PROGRESS 告诉你今天能继续做什么 | 每次会话开始 |
+| `/today` | 基于 Identity/Soul/PROGRESS 判断今天最值得做的 1-3 件事 | 想要更深一层判断时 |
+| `/save` | 保存进度 + AI 自检（写 Growth Log / 更新行为修正清单） | /clear 前用 |
+| `/capture` | 从对话中提取写作素材，落到当前项目的 process/ | 对话聊出东西时 |
+
+---
 
 ## 快速开始
 
-### 1. Fork 并 clone
+### 1. Fork & clone
+
+在 GitHub 上点 Fork（或下载 zip），然后：
 
 ```bash
-# 在 GitHub 上点 Fork（或下载 zip）
 git clone https://github.com/<你的用户名>/lifeos-template.git my-vault
 cd my-vault
 ```
 
-### 2. 装 Claude Code
+### 2. 启动 AI 助理
 
-看 [装 CC 教程视频](https://...)（5-10 分钟，有付费用户群链接）
+支持两种 AI runtime，任选其一：
 
-### 3. 跑 onboarding
-
+**Claude Code:**
 ```bash
 claude
 ```
 
-进入 Claude Code 后，输入：
+**Codex CLI:**
+```bash
+codex
+```
+
+（CLAUDE.md 和 AGENTS.md 内容一致，两个 runtime 都能读到完整上下文）
+
+### 3. 跑 onboarding
+
+进入 AI 对话框，输入：
 
 ```
 /init-life-os
 ```
 
-跟着 AI 助理走 4 步访谈：
-1. 5 维度信息挖掘（让 AI 了解你）
-2. AI 助理命名 + 人格选择（AI 给你 3 个候选）
-3. 命令保留 / 删除选择（默认全留）
-4. 写作风格选择（默认跳过）
+跟着 4 步访谈走：
+1. **5 维度信息挖掘**——AI 了解你（身份/能力/瓶颈/目标/约束）
+2. **AI 助理命名 + 人格选择**——AI 给你 3 个候选，选 1 或自己来
+3. **命令保留选择**（默认全留）
+4. **写作风格选择**（默认跳过）
 
-约 10-30 分钟（取决于第一段你 dump 多少信息）。
+10-30 分钟（取决于你愿意 dump 多少信息）。
 
 ### 4. 开始用
 
@@ -62,31 +184,39 @@ claude
 /go
 ```
 
-AI 助理会读你的 Identity / Soul / PROGRESS，告诉你今天最该做什么。
+AI 会读你的 Identity / Soul / PROGRESS，告诉你今天最该做什么。
 
-## 非 Claude Code 用户
+---
 
-你也可以在其他 AI 工具（ChatGPT / Claude.ai / Codex / Cursor）里跑 onboarding。把 `.claude/commands/init-life-os.md` 文件内容复制粘贴到 AI 对话框，告诉 AI："请按这个 prompt 引导我完成 onboarding"。AI 会输出 markdown 让你手动复制到 vault 内对应文件。
+## 没装 Claude Code / Codex 也能用
 
-日常使用同理：把 `.claude/commands/save.md` `go.md` `today.md` 内容复制粘贴到 AI 对话框，AI 按内容跑。
+`.claude/commands/*.md` 本身就是 prompt 文件。把内容复制粘贴到任何 AI 对话框（ChatGPT / Claude.ai / Gemini / 国内大模型），告诉 AI："请按这个 prompt 引导我"——同样能跑。
 
-## 系统设计原则
+只是没有 `/go` 这种快捷方式，需要每次手动粘贴 prompt + 当前 vault 文件内容。
 
-- **Problems ≤ 3**：战略问题硬性上限，超出说明还没收敛到真正赌注
-- **过程即内容**：项目产出物留项目里
-- **Git 是回收站**：删除直接删
+---
+
+## 设计原则
+
+- **Problems ≤ 3**：战略问题硬上限。超出说明还没收敛到真正赌注
+- **过程即内容**：项目产出物留项目里，不分流
+- **Git 是回收站**：删除直接删，不在 git 之上造软删除
 - **AI 默认不读 99-Archive**：冷库不污染上下文
-- 详见 `CLAUDE.md` 内的核心规则
+- **AI 不主动往 vault 写笔记**：除非明确要求
+
+---
 
 ## 路线图
 
-- v0.1 (current): onboarding skill + 模板 vault
-- v0.2: 命令选择交互、写作风格预设包
-- v1.0: Web 表单 onboarding（无需装 CC）
+- **v0.1**（current）：onboarding skill + 模板 vault + 5 核心命令
+- **v0.2**：命令选择交互、写作风格预设包
+- **v1.0**：Web 表单 onboarding（无需装 CC/Codex）
 
-## 反馈 / 提问
+---
 
-入群（付费用户）或在 [issues](https://github.com/huasan2025/lifeos-template/issues) 反馈。
+## 反馈
+
+- [Issues](https://github.com/huasan2025/lifeos-template/issues)
 
 ## License
 

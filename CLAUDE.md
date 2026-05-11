@@ -27,7 +27,7 @@
 02-Problems/     → 长期赌注 / 战略问题，硬性 ≤3
 03-Projects/     → 问题的解决容器（项目过程产物也在这里）
 04-Library/      → 跨项目复用的笔记/经验/思考（type: howto/decode/insight/analysis）
-90-System/       → 系统级机制（CLAUDE.md / Identity.md / Soul.md / Commands.md / tools/）
+90-System/       → 系统级机制（CLAUDE.md / Identity.md / Soul.md / Commands.md / PROGRESS-ARCHIVE.md）
 91-ChenZhou/     → ${ASSISTANT_NAME}的人格 + 自我进化机制
 99-Archive/      → 内容冷库（AI 默认不读）
 ```
