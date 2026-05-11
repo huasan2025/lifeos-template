@@ -255,6 +255,38 @@ grep -rn '\${USER_NAME}\|${ASSISTANT_NAME}\|${USER_HANDLE}\|${VAULT_NAME}' \
 
 如果有残留：报告给用户哪些文件，让用户确认是否手动改。
 
+### 重命名 91-Assistant 目录
+
+占位符替换完成后，把通用代号 `91-Assistant` 目录重命名为 `91-<助理名>`，让目录名也反映用户的助理。
+
+**变量来源：** `${ASSISTANT_NAME_VALUE}`（Step 2 用户选定/自定义的助理名）
+
+**执行：**
+
+```bash
+cd <vault root>
+
+# 如果助理名含空格 / 特殊字符，按用户偏好规范化（建议保留中文，删空格）
+SAFE_NAME=$(echo "${ASSISTANT_NAME_VALUE}" | tr -d ' /\\:')
+
+# 重命名目录
+if [ -d "91-Assistant" ]; then
+    mv "91-Assistant" "91-${SAFE_NAME}"
+fi
+```
+
+**同步更新引用：** 文档里所有 `91-Assistant/` 字面引用要替换为 `91-${SAFE_NAME}/`（前一步占位符替换已经处理了 `${ASSISTANT_NAME}` 但没处理硬编码的 `91-Assistant` 字面字符串）：
+
+```bash
+find . -type f \( -name '*.md' -o -name '*.json' \) \
+    -not -path './.git/*' \
+    -not -path './.obsidian/*' \
+    -not -path './.claude/commands/init-life-os.md' \
+    -exec sed -i '' "s|91-Assistant|91-${SAFE_NAME}|g" {} +
+```
+
+**特殊文件：** `.obsidian/graph.json` 里的关系图谱配置 path 也含 `91-Assistant`，上面的 find 已覆盖（含 .json）。
+
 ### 收尾
 
 占位符替换完成后：
@@ -272,7 +304,7 @@ grep -rn '\${USER_NAME}\|${ASSISTANT_NAME}\|${USER_HANDLE}\|${VAULT_NAME}' \
    你现在的 vault 是定制版本：
    - Identity.md：${USER_NAME} 的画像
    - Soul.md：${ASSISTANT_NAME} 的人格定义
-   - CLAUDE.md / AGENTS.md / 91-ChenZhou/Evolution Rules.md：所有占位符已替换
+   - CLAUDE.md / AGENTS.md / 91-Assistant/Evolution Rules.md：所有占位符已替换
 
    接下来推荐：
 

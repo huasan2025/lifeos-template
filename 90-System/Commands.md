@@ -56,7 +56,7 @@
 保存当前会话进度到 `PROGRESS.md`，归档旧的"本轮完成的事"到 `90-System/PROGRESS-ARCHIVE.md`。/clear 前用。
 
 ### 副作用
-- 触发${ASSISTANT_NAME}的自我进化检查（详见 `91-ChenZhou/Evolution Rules.md`）
+- 触发${ASSISTANT_NAME}的自我进化检查（详见 `91-Assistant/Evolution Rules.md`）
 
 ## `/capture`
 

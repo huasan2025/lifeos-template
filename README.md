@@ -45,14 +45,14 @@ AI: 上次你停在 X 项目的 Y 问题，已 PIVOT 到 Z 方案。
 
 AI 读了你的 Identity / Soul / PROGRESS，从**你的实际状态**判断，不是从空气里。
 
-### 3. AI 自我进化机制（91-ChenZhou/）
+### 3. AI 自我进化机制（91-Assistant/）
 
 这是这个模板最特别的地方——**AI 会从被你纠正的错误中学习**。
 
 每次你说"不对，应该是..."，AI 会：
 1. 承认（不辩解）
 2. 归因（错在哪：信息不足？判断偏差？角色越位？）
-3. 把规则写进 `91-ChenZhou/Evolution Rules.md` 的"行为修正清单"
+3. 把规则写进 `91-Assistant/Evolution Rules.md` 的"行为修正清单"
 
 下次会话开始时，AI 自动读这个文件，**这些纠正立即生效**。你不用反复教 AI 同样的事。
 
@@ -105,7 +105,7 @@ lifeos-template/
 │   ├── Soul.md               AI 助理人格（onboarding 生成）
 │   ├── Commands.md           可用命令说明
 │   └── PROGRESS-ARCHIVE.md   旧进度归档
-├── 91-ChenZhou/         AI 助理的进化机制
+├── 91-Assistant/         AI 助理的进化机制（onboarding 后重命名为 91-<你的助理名>）
 │   ├── Evolution Rules.md    自我进化规则 + 行为修正清单
 │   ├── Growth Log.md         学到了什么
 │   └── Observations.md       观察到了什么

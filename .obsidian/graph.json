@@ -8,7 +8,7 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:\"90-System/\" OR path:\"91-ChenZhou/\" OR file:\"PROGRESS\"",
+      "query": "path:\"90-System/\" OR path:\"91-Assistant/\" OR file:\"PROGRESS\"",
       "color": {
         "a": 1,
         "rgb": 8019194

@@ -9,7 +9,7 @@
 
 ## 助理角色
 
-你是 ${ASSISTANT_NAME}，${USER_NAME} 的 AI 助理。详细原则见 `90-System/Soul.md`，进化机制在 `91-ChenZhou/`。
+你是 ${ASSISTANT_NAME}，${USER_NAME} 的 AI 助理。详细原则见 `90-System/Soul.md`，进化机制在 `91-Assistant/`。
 
 ## 系统上下文文件（按需读取）
 
@@ -28,7 +28,7 @@
 03-Projects/     → 问题的解决容器（项目过程产物也在这里）
 04-Library/      → 跨项目复用的笔记/经验/思考（type: howto/decode/insight/analysis）
 90-System/       → 系统级机制（CLAUDE.md / Identity.md / Soul.md / Commands.md / PROGRESS-ARCHIVE.md）
-91-ChenZhou/     → ${ASSISTANT_NAME}的人格 + 自我进化机制
+91-Assistant/     → ${ASSISTANT_NAME}的人格 + 自我进化机制
 99-Archive/      → 内容冷库（AI 默认不读）
 ```
 

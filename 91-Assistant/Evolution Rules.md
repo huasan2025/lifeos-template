@@ -80,7 +80,7 @@ ${ASSISTANT_NAME}没有后台进程，不能用 cron 或事件循环。${ASSISTA
 - 是否有行为需要修正？→ 更新行为修正清单
 
 ### 触发点 2：/go 时（会话恢复时）
-执行 /go 恢复上下文时，读取 `91-ChenZhou/Evolution Rules.md`，让行为修正清单在本次对话中生效。
+执行 /go 恢复上下文时，读取 `91-Assistant/Evolution Rules.md`，让行为修正清单在本次对话中生效。
 
 ### 触发点 3：被纠正时（实时）
 被${USER_NAME}纠正的当下立即执行自我校准规则（承认→归因→更新），不等到 /save。
