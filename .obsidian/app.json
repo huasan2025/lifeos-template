@@ -10,7 +10,8 @@
     "coverage/",
     "vendor/",
     "/06-Conversations/",
-    "02-Problems/mermaid-ai-studio/"
+    "02-Problems/mermaid-ai-studio/",
+    "/^AGENTS\\.md$/"
   ],
   "promptDelete": false
 }
