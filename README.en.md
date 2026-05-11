@@ -8,7 +8,7 @@
 > 🌐 **中文版**: [README.md](./README.md)
 
 <p align="center">
-  <img src="./assets/hero.png" alt="lifeos-template — Your custom AI assistant + self-evolution mechanism" width="100%">
+  <img src="./assets/logo.svg" alt="lifeos-template — Your custom AI assistant + self-evolution mechanism" width="100%">
 </p>
 
 > A personal OS template with **your own AI assistant + a self-evolution mechanism**. One `npx` command, 10 minutes to have your own version.

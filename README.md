@@ -8,7 +8,7 @@
 > 🌐 **English version**: [README.en.md](./README.en.md)
 
 <p align="center">
-  <img src="./assets/hero.png" alt="lifeos-template — 你的专属 AI 助理 + 自我进化机制" width="100%">
+  <img src="./assets/logo.svg" alt="lifeos-template — 你的专属 AI 助理 + 自我进化机制" width="100%">
 </p>
 
 > 一个**有专属 AI 助理 + 自我进化机制**的个人操作系统模板。一行 `npx` 命令，10 分钟拥有你自己的版本。
