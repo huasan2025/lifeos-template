@@ -227,14 +227,6 @@ You just don't get the `/go` shortcut — you'll need to paste the prompt + curr
 
 ---
 
-## Roadmap
-
-- **v0.1** (current): onboarding skill + template vault + 5 core commands
-- **v0.2**: command selection interaction, built-in writing style packs (incl. open-source styles like khazix-writer)
-- **v1.0**: Web-based onboarding (no CC/Codex required)
-
----
-
 ## Feedback
 
 - [Issues](https://github.com/huasan2025/lifeos-template/issues)

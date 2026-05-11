@@ -227,14 +227,6 @@ AI 会读你的 Identity / Soul / PROGRESS，告诉你今天最该做什么。
 
 ---
 
-## 路线图
-
-- **v0.1**（current）：onboarding skill + 模板 vault + 5 核心命令
-- **v0.2**：命令选择交互、写作风格预设包
-- **v1.0**：Web 表单 onboarding（无需装 CC/Codex）
-
----
-
 ## 反馈
 
 - [Issues](https://github.com/huasan2025/lifeos-template/issues)
