@@ -89,31 +89,37 @@ description: 4 步访谈引导新用户初始化 lifeos vault（生成 Identity.
 ```
 嗨！我是你的 LifeOS onboarding 助手。
 
-我们先了解你 5 件事，根据你给我的信息密度，可能 2-3 轮也可能 8-10 轮，
-但目标都是同一个：让我充分理解你，写出准确的 Identity.md。
+我会问你 5 件事，让我充分理解你：
 
-5 维度是：
 1. 身份 / 角色
 2. 核心能力
 3. 当前瓶颈 / 主问题
 4. 6-12 月目标
 5. 约束（你不想做什么）
 
-你可以一段话 dump 全部，或我们一个一个聊。从第 1 件开始：
-
-**你目前在做什么？职业 / 状态 / 项目阶段，给我介绍一下。**
+你可以一段话 dump 全部，或一个一个聊。第 1 件是身份——
+**你想我怎么称呼你（中文/英文名都行），目前在做什么？**
 ```
+
+> **起始话术合并问 USER_NAME + 身份角色**——一次问完，避免后面草稿阶段才发现缺称呼。
 
 **用户回答后的处理：**
 
-1. 解析这段话覆盖了 5 维度的哪几个，每个深度如何（1=没说 / 2=浅 / 3=中 / 4=深）
-2. 对每个未达 3 的维度发追问（或合并几个相关的一起追问）
-3. 每追问一组用户回答后，给一句 summary 让用户确认：
+1. **从第一段回答里提取用户称呼**（USER_NAME），写入 state file `step_1.user_name`。如果用户没说，下一轮主动问"你想我怎么称呼你？"
+2. 解析这段话覆盖了 5 维度的哪几个，每个深度如何（1=没说 / 2=浅 / 3=中 / 4=深）
+3. 对每个未达 3 的维度发追问（或合并几个相关的一起追问）
+4. **用户用编号引用列表项时（如"反复花时间的是 1、3、5、6"），必须先 echo 编号对应的内容再继续处理**，避免 AI 凭脑子里记的顺序错位：
+   ```
+   你说"反复花时间的是 1、3、5、6"——即：
+   ① 询盘邮件、③ 工厂规格、⑤ 内容运营、⑥ 客户维护。理解对吗？
+   ```
+   这条规则在整个 onboarding 中都适用（Step 1/2/3/4 任何时候用户用编号引用都要先 echo）。
+5. 每追问一组用户回答后，给一句 summary 让用户确认：
    ```
    第 N 维度（XX）我理解了：[一句话 summary]，对吗？
    ```
-4. 用户 confirm 后，进入下一个未达 3 的维度
-5. 全部 5 维度达到 ≥3 时，进入"草稿 + 审查"环节
+6. 用户 confirm 后，进入下一个未达 3 的维度
+7. 全部 5 维度达到 ≥3 时，进入"草稿 + 审查"环节
 
 **草稿生成：**
 
@@ -192,11 +198,21 @@ description: 4 步访谈引导新用户初始化 lifeos vault（生成 Identity.
 
 ### Step 3：命令选择（默认全留）
 
-直接告诉用户："默认保留所有命令（/save /go /today /capture）。如果你想删除某个，可以打开 `90-System/Commands.md` 手动改。"
+告诉用户："vault 自带 5 个命令，建议都保留——绝大多数用户都会用上。每个命令的作用：
+
+| 命令 | 一句话 |
+|---|---|
+| `/init-life-os` | 首次 onboarding（就是现在跑的这个）。一辈子一次。 |
+| `/go` | 每次会话开始跑。AI 读 `PROGRESS.md` 的'还没做的事'，告诉你今天能继续做什么。 |
+| `/today` | 比 `/go` 更深一层。基于 Identity/Soul/PROGRESS 判断你今天**最该**做的 1-3 件事。 |
+| `/save` | 会话结束前跑。把进度更新到 PROGRESS.md，AI 顺便做自检（学到的写进 Evolution Rules）。 |
+| `/capture` | 对话中聊出洞察/转折时跑。提取成 Process Note 落到当前项目的 `process/` 子目录。 |
+
+如果想删除某个，可以打开 `90-System/Commands.md` 手动改。但 MVP 建议都留着。"
 
 ### Step 4：写作风格（默认跳过）
 
-直接告诉用户："写作风格预设暂未实装（v0.2 加），先跳过。如果需要让 AI 学习某种风格，可以在 90-System/ 下手工建一个 character.md 描述你想要的风格。"
+告诉用户："写作风格预置包还在 v0.2 路线上（届时会自带几个开源风格，类似 khazix-writer 这种）。**v0.1 直接跳过**，不需要你做任何事。如果想现在就让 AI 学习某种风格，可以在 `90-System/` 下自己建一个 `character.md` 描述你想要的风格。"
 
 ### 占位符替换
 
@@ -206,15 +222,13 @@ Step 2 完成后，根据用户回答的几个关键变量，全 vault 字符串
 
 | 占位符 | 替换值来源 | 示例 |
 |---|---|---|
-| `${USER_NAME}` | Step 1 用户身份回答里提取的称呼 | "Alice" / "小王" / "李雷" |
+| `${USER_NAME}` | Step 1 起始话术里提取的用户称呼 | "Alice" / "小王" / "李雷" |
 | `${ASSISTANT_NAME}` | Step 2 用户选定 / 自定义的助理名 | "南瓜" / "Lex" / "小文" |
-| `${USER_HANDLE}` | （可选）GitHub 用户名或社媒 handle | "alicedev" |
 | `${VAULT_NAME}` | （可选）用户给自己 vault 取的名字 | "MyLifeOS" / "Alice 的人生 OS" |
 
 **变量收集时机：**
-- USER_NAME：Step 1 第一个维度回答时主动问"你怎么称呼自己？"（如果用户没说）
+- USER_NAME：Step 1 起始话术里就已问（合并在第 1 维度问题里）
 - ASSISTANT_NAME：Step 2 选完候选时已知
-- USER_HANDLE：onboarding 结尾问一次（"你想用什么 handle 作为 GitHub username？可选，跳过用 \"my\""）
 - VAULT_NAME：onboarding 结尾问一次（"给你的 LifeOS 起个名？默认 \"MyLifeOS\""）
 
 **替换执行（Bash 工具）：**
@@ -235,7 +249,6 @@ find . -type f \( \
     -exec sed -i '' \
         -e "s|\${USER_NAME}|${USER_NAME_VALUE}|g" \
         -e "s|\${ASSISTANT_NAME}|${ASSISTANT_NAME_VALUE}|g" \
-        -e "s|\${USER_HANDLE}|${USER_HANDLE_VALUE}|g" \
         -e "s|\${VAULT_NAME}|${VAULT_NAME_VALUE}|g" \
         {} +
 ```
@@ -244,7 +257,7 @@ find . -type f \( \
 
 ```bash
 # 检查残留占位符（应忽略 init-life-os.md 自身）
-grep -rn '\${USER_NAME}\|${ASSISTANT_NAME}\|${USER_HANDLE}\|${VAULT_NAME}' \
+grep -rn '\${USER_NAME}\|${ASSISTANT_NAME}\|${VAULT_NAME}' \
     --include='*.md' \
     --exclude-dir=.git \
     --exclude-dir=.obsidian \
@@ -278,14 +291,17 @@ fi
 **同步更新引用：** 文档里所有 `91-Assistant/` 字面引用要替换为 `91-${SAFE_NAME}/`（前一步占位符替换已经处理了 `${ASSISTANT_NAME}` 但没处理硬编码的 `91-Assistant` 字面字符串）：
 
 ```bash
+# 主 vault 内的 .md / .json 文件
 find . -type f \( -name '*.md' -o -name '*.json' \) \
     -not -path './.git/*' \
     -not -path './.obsidian/*' \
     -not -path './.claude/commands/init-life-os.md' \
     -exec sed -i '' "s|91-Assistant|91-${SAFE_NAME}|g" {} +
-```
 
-**特殊文件：** `.obsidian/graph.json` 里的关系图谱配置 path 也含 `91-Assistant`，上面的 find 已覆盖（含 .json）。
+# .obsidian/ 配置（graph.json 的 path 查询会引用 91-Assistant；上面的 find 排除了 .obsidian/，所以这里单独处理）
+find .obsidian -type f -name '*.json' \
+    -exec sed -i '' "s|91-Assistant|91-${SAFE_NAME}|g" {} +
+```
 
 ### 收尾
 
