@@ -7,7 +7,9 @@
 
 > 🌐 **English version**: [README.en.md](./README.en.md)
 
-<!-- TODO: 顶部 hero image (assets/hero.png) — 见 03-Projects/lifeos-template/articles/2026-05-11-readme-图prompts.md 图 1 -->
+<p align="center">
+  <img src="./assets/hero.png" alt="lifeos-template — 你的专属 AI 助理 + 自我进化机制" width="100%">
+</p>
 
 > 一个**有专属 AI 助理 + 自我进化机制**的个人操作系统模板。一行 `npx` 命令，10 分钟拥有你自己的版本。
 
@@ -27,7 +29,9 @@
 
 还有其他——比如自我进化机制、跨项目复用、Problem ≤3 的硬约束等等。完整故事会陆续写出来。
 
-<!-- TODO: Why 段配图 (assets/why-i-built.png) — 见图 prompts 图 2 -->
+<p align="center">
+  <img src="./assets/why-i-built.png" alt="2026-01 → 2026-05，5 轮重构演化路径" width="85%">
+</p>
 
 我每天还在用 HuaSan-LifeOS。lifeos-template 是它的可分享版本。
 
@@ -85,19 +89,9 @@ AI 读了你的 Identity / Soul / PROGRESS，从**你的实际状态**判断，�
 
 ### 4. Problem → Project → Library 三层模型
 
-```
-Problems（≤3 个长期赌注）
-  ├─ Project A（解决 Problem 1 的尝试）
-  │     ├─ process/（执行过程踩坑笔记）
-  │     └─ articles/（顺手产出的文章/视频稿）
-  └─ Project B（解决 Problem 2 的尝试）
-
-Library（跨项目复用的资产）
-  ├─ howto: 一次性问题的解决经验
-  ├─ insight: 从经验提炼的独立洞见
-  ├─ decode: 外部内容的消化产出
-  └─ analysis: 主题/案例的系统拆解
-```
+<p align="center">
+  <img src="./assets/three-tier-model.svg" alt="Problem → Project → Library 三层模型" width="100%">
+</p>
 
 - **≤3 硬上限**：超出说明还没收敛到真正的战略赌注
 - **每个 Project 必须锚定一个 Problem**（双链强制）：防止做了一堆事但不知道为什么
@@ -159,6 +153,10 @@ lifeos-template/
 | `/today` | 基于 Identity/Soul/PROGRESS 判断今天最值得做的 1-3 件事 | 想要更深一层判断时 |
 | `/save` | 保存进度 + AI 自检（写 Growth Log / 更新行为修正清单） | /clear 前用 |
 | `/capture` | 从对话中提取写作素材，落到当前项目的 process/ | 对话聊出东西时 |
+
+<p align="center">
+  <img src="./assets/commands-workflow.svg" alt="5 个核心命令工作流" width="100%">
+</p>
 
 ---
 

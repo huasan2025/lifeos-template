@@ -7,7 +7,9 @@
 
 > 🌐 **中文版**: [README.md](./README.md)
 
-<!-- TODO: hero image at assets/hero.png -->
+<p align="center">
+  <img src="./assets/hero.png" alt="lifeos-template — Your custom AI assistant + self-evolution mechanism" width="100%">
+</p>
 
 > A personal OS template with **your own AI assistant + a self-evolution mechanism**. One `npx` command, 10 minutes to have your own version.
 
@@ -27,7 +29,9 @@ It solves a few very real problems for me:
 
 There's more — self-evolution mechanism, cross-project reuse, the hard ≤3 Problems constraint, etc. The full story unfolds as I keep writing.
 
-<!-- TODO: Why image at assets/why-i-built.png -->
+<p align="center">
+  <img src="./assets/why-i-built.png" alt="5 rewrites from 2026-01 to 2026-05" width="85%">
+</p>
 
 I still use HuaSan-LifeOS every day. lifeos-template is its shareable version.
 
@@ -85,19 +89,9 @@ Next session it reads this file automatically — **the corrections take effect*
 
 ### 4. Problem → Project → Library 3-tier model
 
-```
-Problems (≤3 long-term bets)
-  ├─ Project A (an attempt to solve Problem 1)
-  │     ├─ process/ (execution notes, decisions, lessons)
-  │     └─ articles/ (articles, video scripts produced along the way)
-  └─ Project B (an attempt to solve Problem 2)
-
-Library (cross-project reusable assets)
-  ├─ howto: one-off problem solutions
-  ├─ insight: distilled principles from experience
-  ├─ decode: digested external content
-  └─ analysis: systematic breakdowns of topics/cases
-```
+<p align="center">
+  <img src="./assets/three-tier-model.svg" alt="Problem → Project → Library 3-tier model" width="100%">
+</p>
 
 - **≤3 hard cap**: more than that means you haven't converged to real bets yet
 - **Every Project must anchor to a Problem** (enforced via bidirectional link): prevents "did a lot, don't know why"
@@ -159,6 +153,10 @@ lifeos-template/
 | `/today` | Based on Identity/Soul/PROGRESS, judges the 1-3 most important things today | When you want a deeper take |
 | `/save` | Save progress + AI self-check (write Growth Log / update behavior corrections) | Before `/clear` |
 | `/capture` | Extract writing material from conversation, lands in current project's `process/` | When the conversation surfaces something worth keeping |
+
+<p align="center">
+  <img src="./assets/commands-workflow.svg" alt="5 core commands workflow" width="100%">
+</p>
 
 ---
 
