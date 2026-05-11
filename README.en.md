@@ -90,7 +90,7 @@ Next session it reads this file automatically — **the corrections take effect*
 ### 4. Problem → Project → Library 3-tier model
 
 <p align="center">
-  <img src="./assets/three-tier-model.svg" alt="Problem → Project → Library 3-tier model" width="100%">
+  <img src="./assets/three-tier-model.png" alt="Problem → Project → Library 3-tier model" width="100%">
 </p>
 
 - **≤3 hard cap**: more than that means you haven't converged to real bets yet
@@ -155,7 +155,7 @@ lifeos-template/
 | `/capture` | Extract writing material from conversation, lands in current project's `process/` | When the conversation surfaces something worth keeping |
 
 <p align="center">
-  <img src="./assets/commands-workflow.svg" alt="5 core commands workflow" width="100%">
+  <img src="./assets/commands-workflow.png" alt="5 core commands workflow" width="100%">
 </p>
 
 ---

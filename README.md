@@ -90,7 +90,7 @@ AI 读了你的 Identity / Soul / PROGRESS，从**你的实际状态**判断，�
 ### 4. Problem → Project → Library 三层模型
 
 <p align="center">
-  <img src="./assets/three-tier-model.svg" alt="Problem → Project → Library 三层模型" width="100%">
+  <img src="./assets/three-tier-model.png" alt="Problem → Project → Library 三层模型" width="100%">
 </p>
 
 - **≤3 硬上限**：超出说明还没收敛到真正的战略赌注
@@ -155,7 +155,7 @@ lifeos-template/
 | `/capture` | 从对话中提取写作素材，落到当前项目的 process/ | 对话聊出东西时 |
 
 <p align="center">
-  <img src="./assets/commands-workflow.svg" alt="5 个核心命令工作流" width="100%">
+  <img src="./assets/commands-workflow.png" alt="5 个核心命令工作流" width="100%">
 </p>
 
 ---
