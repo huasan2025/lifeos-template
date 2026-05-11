@@ -239,6 +239,28 @@ AI 会读你的 Identity / Soul / PROGRESS，告诉你今天最该做什么。
 
 - [Issues](https://github.com/huasan2025/lifeos-template/issues)
 
+---
+
+## 支持与交流
+
+### 联系画伞
+
+| 平台 | 账号 |
+|---|---|
+| 💬 微信 | `huasanai` |
+| 🐦 X | [@yfusionai](https://x.com/yfusionai) |
+| 🎬 抖音 | [@画伞](https://v.douyin.com/zHu4VUhztes/) |
+
+### 扫码赞赏，支持开源创作 ☕
+
+如果 lifeos-template 帮到你，欢迎支持。微信 / 支付宝二合一收款码：
+
+<p align="center">
+  <img src="./assets/sponsor-qr.png" alt="扫码赞赏" width="280">
+</p>
+
+---
+
 ## License
 
 MIT

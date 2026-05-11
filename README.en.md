@@ -239,6 +239,28 @@ You just don't get the `/go` shortcut — you'll need to paste the prompt + curr
 
 - [Issues](https://github.com/huasan2025/lifeos-template/issues)
 
+---
+
+## Support & Connect
+
+### Reach me
+
+| Platform | Handle |
+|---|---|
+| 💬 WeChat | `huasanai` |
+| 🐦 X | [@yfusionai](https://x.com/yfusionai) |
+| 🎬 Douyin | [@画伞](https://v.douyin.com/zHu4VUhztes/) |
+
+### Sponsor — support open source ☕
+
+If lifeos-template helps you, scan to sponsor. WeChat Pay / Alipay combo QR:
+
+<p align="center">
+  <img src="./assets/sponsor-qr.png" alt="Sponsor QR" width="280">
+</p>
+
+---
+
 ## License
 
 MIT
