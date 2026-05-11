@@ -1,0 +1,12 @@
+.DS_Store
+**/.DS_Store
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+**/node_modules/
+**/.next/
+**/__pycache__/
+**/*.pyc
+*.node
+*.dylib
+*.so
+.onboarding-state.json
