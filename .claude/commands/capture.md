@@ -18,7 +18,7 @@
 
 ## 输出格式
 
-保存到 `04-Outputs/Process Notes/{{YYYY-MM-DD}}_{{简短标题}}.md`：
+保存到 `03-Projects/<当前项目>/process/{{YYYY-MM-DD}}_{{简短标题}}.md`（"过程即内容"——Process Note 跟项目走）：
 
 ```markdown
 ---
