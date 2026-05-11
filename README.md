@@ -1,6 +1,6 @@
 # lifeos-template
 
-> 一个**有专属 AI 助理 + 自我进化机制**的个人操作系统模板。fork 一下，10 分钟拥有你自己的版本。
+> 一个**有专属 AI 助理 + 自我进化机制**的个人操作系统模板。一行 `npx` 命令，10 分钟拥有你自己的版本。
 
 不是知识库，不是第二大脑。是一个**服务现实决策**的人生与项目操作系统——帮你聚焦真正的战略问题，把日常推进绑在长期赌注上。
 
@@ -127,7 +127,7 @@ lifeos-template/
 
 | 命令 | 作用 | 何时用 |
 |---|---|---|
-| `/init-life-os` | 4 步访谈生成 Identity + Soul + 占位符替换 | 拿到 fresh fork 之后跑一次 |
+| `/init-life-os` | 4 步访谈生成 Identity + Soul + 占位符替换 | 初始化 vault 之后跑一次 |
 | `/go` | 读 PROGRESS 告诉你今天能继续做什么 | 每次会话开始 |
 | `/today` | 基于 Identity/Soul/PROGRESS 判断今天最值得做的 1-3 件事 | 想要更深一层判断时 |
 | `/save` | 保存进度 + AI 自检（写 Growth Log / 更新行为修正清单） | /clear 前用 |
@@ -135,36 +135,32 @@ lifeos-template/
 
 ---
 
-## 快速开始
+## 快速开始（3 步）
 
-### 1. Fork & clone
+**前置：** 装好 Node.js（开发者通常都有）和 [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) 或 [Codex CLI](https://developers.openai.com/codex/cli)。
 
-在 GitHub 上点 Fork（或下载 zip），然后：
+### 1. 一行命令初始化 vault
 
 ```bash
-git clone https://github.com/<你的用户名>/lifeos-template.git my-vault
+npx degit huasan2025/lifeos-template my-vault
 cd my-vault
 ```
 
-### 2. 启动 AI 助理
+`degit` 是 Vercel 维护的成熟工具，会**干净 clone**模板内容到 `my-vault/`（不带上游 git 历史，给你一个干净起点）。`my-vault` 改成你想要的目录名即可。
 
-支持两种 AI runtime，任选其一：
+> 想要 git 版本管理 + 备份？clone 完后自己 `git init` + push 到你的 private repo。
+> 想 fork 上游 repo 以便未来同步更新？也可以用经典 `git clone https://github.com/<你的用户名>/lifeos-template.git my-vault`。
 
-**Claude Code:**
+### 2. 启动 AI 助理 + 跑 onboarding
+
+进入目录后启动 AI runtime（任选其一）：
+
 ```bash
-claude
+claude    # Claude Code
+codex     # Codex CLI
 ```
 
-**Codex CLI:**
-```bash
-codex
-```
-
-（CLAUDE.md 和 AGENTS.md 内容一致，两个 runtime 都能读到完整上下文）
-
-### 3. 跑 onboarding
-
-进入 AI 对话框，输入：
+在 AI 对话框输入：
 
 ```
 /init-life-os
@@ -178,7 +174,7 @@ codex
 
 10-30 分钟（取决于你愿意 dump 多少信息）。
 
-### 4. 开始用
+### 3. 开始用
 
 ```
 /go
