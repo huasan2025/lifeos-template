@@ -110,6 +110,7 @@ AI 读了你的 Identity / Soul / PROGRESS，从**你的实际状态**判断，�
 ```
 lifeos-template/
 ├── 00-Dashboard/        当天操作入口（Published.md 已发布作品索引）
+├── 01-Inbox/            临时想法 / 还没想清楚但值得记的内容
 ├── 02-Problems/         长期战略问题（≤3）
 │   └── EXAMPLE-Problem.md    示范文件，看完可删
 ├── 03-Projects/         问题的解决容器
@@ -138,7 +139,7 @@ lifeos-template/
 │   ├── save.md               保存进度 + AI 自检
 │   └── capture.md            提取写作素材
 ├── CLAUDE.md            Claude Code 入口
-├── AGENTS.md            Codex CLI 入口（内容同 CLAUDE.md）
+├── AGENTS.md            Codex CLI 入口（符号链接 → CLAUDE.md，单一源头）
 └── PROGRESS.md          当前进度（每次 /save 更新）
 ```
 
@@ -173,23 +174,48 @@ cd my-vault
 
 `degit` 是 Vercel 维护的成熟工具，会**干净 clone**模板内容到 `my-vault/`（不带上游 git 历史，给你一个干净起点）。`my-vault` 改成你想要的目录名即可。
 
+> ⚠️ **degit 要求目标目录不存在或为空**。如果你已经手动建了 `my-vault/` 文件夹，删掉再跑，或者加 `--force`：`npx degit --force huasan2025/lifeos-template my-vault`（会覆盖目录里现有内容，慎用）。
+
+> 🪟 **Windows 用户**：`AGENTS.md` 是指向 `CLAUDE.md` 的符号链接。Windows 需要开启"开发者模式"或用管理员权限运行才能正确创建符号链接，否则 `AGENTS.md` 会变成内容是 `CLAUDE.md` 字符串的文本文件。退路：clone 完后手动 `copy CLAUDE.md AGENTS.md`，但之后 `CLAUDE.md` 改了要记得手动同步。
+
 > 想要 git 版本管理 + 备份？clone 完后自己 `git init` + push 到你的 private repo。
 > 想 fork 上游 repo 以便未来同步更新？也可以用经典 `git clone https://github.com/<你的用户名>/lifeos-template.git my-vault`。
 
 ### 2. 启动 AI 助理 + 跑 onboarding
 
-进入目录后启动 AI runtime（任选其一）：
+进入目录后启动你用的 AI runtime——**两种 runtime 的触发方式不一样**：
+
+**Claude Code 用户：**
 
 ```bash
-claude    # Claude Code
-codex     # Codex CLI
+claude
 ```
 
-在 AI 对话框输入：
+在对话框输入 slash 命令：
 
 ```
 /init-life-os
 ```
+
+**Codex CLI 用户：**
+
+```bash
+codex
+```
+
+Codex 不识别项目级 slash 命令。直接用自然语言说意图即可：
+
+```
+开始 onboarding
+```
+
+或
+
+```
+请按 .claude/commands/init-life-os.md 引导我初始化 lifeos
+```
+
+Codex 启动时会读 `AGENTS.md`（软链到 `CLAUDE.md`），里面有 slash 命令路由表，能正确触发对应工作流。
 
 跟着 4 步访谈走：
 1. **5 维度信息挖掘**——AI 了解你（身份/能力/瓶颈/目标/约束）

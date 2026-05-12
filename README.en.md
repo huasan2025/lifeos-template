@@ -110,6 +110,7 @@ No separate "Outputs" folder. Doing the work produces the content. High-quality 
 ```
 lifeos-template/
 ├── 00-Dashboard/        Daily entry point (Published.md cross-cuts shipped work)
+├── 01-Inbox/            Quick captures / thoughts not yet structured
 ├── 02-Problems/         Long-term strategic problems (≤3)
 │   └── EXAMPLE-Problem.md    Example, delete after reading
 ├── 03-Projects/         Problem-solving containers
@@ -138,7 +139,7 @@ lifeos-template/
 │   ├── save.md               Save progress + AI self-check
 │   └── capture.md            Extract writing material
 ├── CLAUDE.md            Claude Code entry
-├── AGENTS.md            Codex CLI entry (same content as CLAUDE.md)
+├── AGENTS.md            Codex CLI entry (symlink → CLAUDE.md, single source)
 └── PROGRESS.md          Current progress (updated each /save)
 ```
 
@@ -173,23 +174,48 @@ cd my-vault
 
 `degit` is a mature tool maintained by Vercel — it does a **clean clone** of the template content into `my-vault/` (no upstream git history, you start fresh). Rename `my-vault` to whatever you want.
 
+> ⚠️ **degit requires the target directory to not exist or be empty.** If you already created `my-vault/` manually, delete it first or use `--force`: `npx degit --force huasan2025/lifeos-template my-vault` (overwrites whatever's there, use with care).
+
+> 🪟 **Windows users**: `AGENTS.md` is a symlink to `CLAUDE.md`. Windows needs Developer Mode enabled (or admin privileges) to create symlinks correctly — otherwise `AGENTS.md` will be a plain text file containing the string `CLAUDE.md`. Fallback: after clone, manually `copy CLAUDE.md AGENTS.md`, but remember to re-sync whenever `CLAUDE.md` changes.
+
 > Want git versioning + backup? After clone, run `git init` and push to your own private repo.
 > Want to fork upstream so you can sync future updates? Use the classic `git clone https://github.com/<your-username>/lifeos-template.git my-vault` instead.
 
 ### 2. Launch AI assistant + run onboarding
 
-Enter the directory and start your AI runtime (pick one):
+Enter the directory and start the runtime you use — **trigger differs between the two**:
+
+**Claude Code users:**
 
 ```bash
-claude    # Claude Code
-codex     # Codex CLI
+claude
 ```
 
-In the AI prompt, type:
+Type the slash command:
 
 ```
 /init-life-os
 ```
+
+**Codex CLI users:**
+
+```bash
+codex
+```
+
+Codex does not recognize project-level slash commands. Just say what you want in natural language:
+
+```
+Start onboarding
+```
+
+or
+
+```
+Please follow .claude/commands/init-life-os.md to guide me through onboarding
+```
+
+On startup Codex reads `AGENTS.md` (symlinked to `CLAUDE.md`), which contains a slash-command routing table — so the right workflow gets triggered.
 
 Walk through the 4-step interview:
 1. **5-dimension info gathering** — AI gets to know you (identity / capabilities / blockers / goals / constraints)

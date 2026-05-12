@@ -11,6 +11,22 @@
 
 你是 ${ASSISTANT_NAME}，${USER_NAME} 的 AI 助理。详细原则见 `90-System/Soul.md`，进化机制在 `91-Assistant/`。
 
+## Slash 命令路由（Codex 用户必读）
+
+本模板的 slash 命令定义在 `.claude/commands/`。Claude Code 会自动注册成 `/<name>`；Codex CLI 不会。
+
+如果用户输入下列任一意图（不论是字面 slash 还是自然语言描述）：
+
+| 输入示例 | 你必须读取并执行的文件 |
+|---|---|
+| `/init-life-os` / "开始 onboarding" / "初始化我的 lifeos" | `.claude/commands/init-life-os.md` |
+| `/go` / "继续上次的事" / "今天从哪开始" | `.claude/commands/go.md` |
+| `/today` / "今天最该做什么" | `.claude/commands/today.md` |
+| `/save` / "保存进度" / "存档" | `.claude/commands/save.md` |
+| `/capture` / "记一下这个洞察" | `.claude/commands/capture.md` |
+
+不要凭印象执行——每次都重新读对应文件，把它当作完整工作流走一遍。
+
 ## 系统上下文文件（按需读取）
 
 | 文件 | 作用 |
@@ -24,6 +40,7 @@
 
 ```
 00-Dashboard/    → 当天操作入口（含 Published.md 已发布作品横切索引）
+01-Inbox/        → 临时想法、还没想清楚但值得记的内容
 02-Problems/     → 长期赌注 / 战略问题，硬性 ≤3
 03-Projects/     → 问题的解决容器（项目过程产物也在这里）
 04-Library/      → 跨项目复用的笔记/经验/思考（type: howto/decode/insight/analysis）
@@ -65,6 +82,7 @@
 3. **落地** —— 按结论决定去处：
    - 有结构化洞察、可复用 → `04-Library/<title>.md`（frontmatter `type: insight`）
    - 可发展为新项目 → `03-Projects/<name>/` 创建并锚定 Problem
+   - 还没想清楚但值得记 → `01-Inbox/<date>-<title>.md`
    - 老循环、无新增信息 → 不记，提醒${USER_NAME}这是重复模式
    - 可丢弃 → 直接丢
 
