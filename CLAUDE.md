@@ -1,6 +1,6 @@
 # ${VAULT_NAME}
 
-这是 ${USER_NAME} 的个人 LifeOS（基于 [lifeos-template](https://github.com/huasan2025/lifeos-template) 搭建）。
+这是 ${USER_NAME} 的个人 LifeOS（基于 [lifeos-template](https://github.com/huasanai/lifeos-template) 搭建）。
 
 ## 系统定位
 

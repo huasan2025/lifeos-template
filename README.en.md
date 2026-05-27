@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Made with Claude Code](https://img.shields.io/badge/Made_with-Claude_Code-d97706)](https://docs.claude.com/en/docs/claude-code/overview)
 [![Works with Codex CLI](https://img.shields.io/badge/Works_with-Codex_CLI-10a37f)](https://developers.openai.com/codex/cli)
-[![Version](https://img.shields.io/github/v/tag/huasan2025/lifeos-template?label=version)](https://github.com/huasan2025/lifeos-template/tags)
+[![Version](https://img.shields.io/github/v/tag/huasanai/lifeos-template?label=version)](https://github.com/huasanai/lifeos-template/tags)
 
 > 🌐 **中文版**: [README.md](./README.md)
 
@@ -168,13 +168,13 @@ lifeos-template/
 ### 1. Initialize your vault with one command
 
 ```bash
-npx degit huasan2025/lifeos-template my-vault
+npx degit huasanai/lifeos-template my-vault
 cd my-vault
 ```
 
 `degit` is a mature tool maintained by Vercel — it does a **clean clone** of the template content into `my-vault/` (no upstream git history, you start fresh). Rename `my-vault` to whatever you want.
 
-> ⚠️ **degit requires the target directory to not exist or be empty.** If you already created `my-vault/` manually, delete it first or use `--force`: `npx degit --force huasan2025/lifeos-template my-vault` (overwrites whatever's there, use with care).
+> ⚠️ **degit requires the target directory to not exist or be empty.** If you already created `my-vault/` manually, delete it first or use `--force`: `npx degit --force huasanai/lifeos-template my-vault` (overwrites whatever's there, use with care).
 
 > 🪟 **Windows users**: `AGENTS.md` is a symlink to `CLAUDE.md`. Windows needs Developer Mode enabled (or admin privileges) to create symlinks correctly — otherwise `AGENTS.md` will be a plain text file containing the string `CLAUDE.md`. Fallback: after clone, manually `copy CLAUDE.md AGENTS.md`, but remember to re-sync whenever `CLAUDE.md` changes.
 
@@ -255,7 +255,7 @@ You just don't get the `/go` shortcut — you'll need to paste the prompt + curr
 
 ## Feedback
 
-- [Issues](https://github.com/huasan2025/lifeos-template/issues)
+- [Issues](https://github.com/huasanai/lifeos-template/issues)
 
 ---
 
@@ -266,16 +266,9 @@ You just don't get the `/go` shortcut — you'll need to paste the prompt + curr
 | Platform | Handle |
 |---|---|
 | 💬 WeChat | `huasanai` |
+| 🌐 Personal site | [huasan.dev](https://huasan.dev) (building) |
 | 🐦 X | [@yfusionai](https://x.com/yfusionai) |
 | 🎬 Douyin | [@画伞](https://v.douyin.com/zHu4VUhztes/) |
-
-### Sponsor — support open source ☕
-
-If lifeos-template helps you, scan to sponsor. WeChat Pay / Alipay combo QR:
-
-<p align="center">
-  <img src="./assets/sponsor-qr.png" alt="Sponsor QR" width="280">
-</p>
 
 ---
 

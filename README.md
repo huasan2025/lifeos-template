@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Made with Claude Code](https://img.shields.io/badge/Made_with-Claude_Code-d97706)](https://docs.claude.com/en/docs/claude-code/overview)
 [![Works with Codex CLI](https://img.shields.io/badge/Works_with-Codex_CLI-10a37f)](https://developers.openai.com/codex/cli)
-[![Version](https://img.shields.io/github/v/tag/huasan2025/lifeos-template?label=version)](https://github.com/huasan2025/lifeos-template/tags)
+[![Version](https://img.shields.io/github/v/tag/huasanai/lifeos-template?label=version)](https://github.com/huasanai/lifeos-template/tags)
 
 > 🌐 **English version**: [README.en.md](./README.en.md)
 
@@ -168,13 +168,13 @@ lifeos-template/
 ### 1. 一行命令初始化 vault
 
 ```bash
-npx degit huasan2025/lifeos-template my-vault
+npx degit huasanai/lifeos-template my-vault
 cd my-vault
 ```
 
 `degit` 是 Vercel 维护的成熟工具，会**干净 clone**模板内容到 `my-vault/`（不带上游 git 历史，给你一个干净起点）。`my-vault` 改成你想要的目录名即可。
 
-> ⚠️ **degit 要求目标目录不存在或为空**。如果你已经手动建了 `my-vault/` 文件夹，删掉再跑，或者加 `--force`：`npx degit --force huasan2025/lifeos-template my-vault`（会覆盖目录里现有内容，慎用）。
+> ⚠️ **degit 要求目标目录不存在或为空**。如果你已经手动建了 `my-vault/` 文件夹，删掉再跑，或者加 `--force`：`npx degit --force huasanai/lifeos-template my-vault`（会覆盖目录里现有内容，慎用）。
 
 > 🪟 **Windows 用户**：`AGENTS.md` 是指向 `CLAUDE.md` 的符号链接。Windows 需要开启"开发者模式"或用管理员权限运行才能正确创建符号链接，否则 `AGENTS.md` 会变成内容是 `CLAUDE.md` 字符串的文本文件。退路：clone 完后手动 `copy CLAUDE.md AGENTS.md`，但之后 `CLAUDE.md` 改了要记得手动同步。
 
@@ -255,7 +255,7 @@ AI 会读你的 Identity / Soul / PROGRESS，告诉你今天最该做什么。
 
 ## 反馈
 
-- [Issues](https://github.com/huasan2025/lifeos-template/issues)
+- [Issues](https://github.com/huasanai/lifeos-template/issues)
 
 ---
 
@@ -266,16 +266,9 @@ AI 会读你的 Identity / Soul / PROGRESS，告诉你今天最该做什么。
 | 平台 | 账号 |
 |---|---|
 | 💬 微信 | `huasanai` |
+| 🌐 个人网站 | [huasan.dev](https://huasan.dev)（构建中） |
 | 🐦 X | [@yfusionai](https://x.com/yfusionai) |
 | 🎬 抖音 | [@画伞](https://v.douyin.com/zHu4VUhztes/) |
-
-### 扫码赞赏，支持开源创作 ☕
-
-如果 lifeos-template 帮到你，欢迎支持。微信 / 支付宝二合一收款码：
-
-<p align="center">
-  <img src="./assets/sponsor-qr.png" alt="扫码赞赏" width="280">
-</p>
 
 ---
 
