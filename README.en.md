@@ -19,7 +19,7 @@ Not a knowledge base. Not a second brain. It's a **decision-serving** personal &
 
 ## Why I built this
 
-I started building this personal OS in January 2026. It went through **5 complete rewrites** — each one because I realized the structure still wasn't serving my actual decisions well enough. Now it works smoothly, so I decided to open-source it.
+I started building this personal OS in January 2026. It went through **6 complete rewrites** — each one because I realized the structure still wasn't serving my actual decisions well enough. Now it works smoothly, so I decided to open-source it.
 
 It solves a few very real problems for me:
 
@@ -30,7 +30,7 @@ It solves a few very real problems for me:
 There's more — self-evolution mechanism, cross-project reuse, the hard ≤3 Problems constraint, etc. The full story unfolds as I keep writing.
 
 <p align="center">
-  <img src="./assets/why-i-built.png" alt="5 rewrites from 2026-01 to 2026-05" width="85%">
+  <img src="./assets/why-i-built.png" alt="6 rewrites from 2026-01 to 2026-05" width="85%">
 </p>
 
 I still use HuaSan-LifeOS every day. lifeos-template is its shareable version.
@@ -134,10 +134,10 @@ lifeos-template/
 ├── 99-Archive/          Cold storage (AI doesn't read by default)
 ├── .claude/commands/    5 core commands
 │   ├── init-life-os.md       Onboarding
-│   ├── go.md                 Restore context
-│   ├── today.md              Today's focus
+│   ├── go.md                 Restore context + today's judgment
 │   ├── save.md               Save progress + AI self-check
-│   └── capture.md            Extract writing material
+│   ├── capture.md            Extract writing material
+│   └── lint.md               Structure self-check
 ├── CLAUDE.md            Claude Code entry
 ├── AGENTS.md            Codex CLI entry (symlink → CLAUDE.md, single source)
 └── PROGRESS.md          Current progress (updated each /save)
@@ -150,10 +150,10 @@ lifeos-template/
 | Command | One-liner | When to use |
 |---|---|---|
 | `/init-life-os` | 4-step interview generates Identity + Soul + placeholder replacement | Once after fresh vault init |
-| `/go` | Reads PROGRESS, tells you what to continue today | Every session start |
-| `/today` | Based on Identity/Soul/PROGRESS, judges the 1-3 most important things today | When you want a deeper take |
-| `/save` | Save progress + AI self-check (write Growth Log / update behavior corrections) | Before `/clear` |
+| `/go` | Restore context + judge the 1-3 most important things today (incl. "don't do today" and "minimum fallback") | Every session start |
+| `/save` | Save progress + AI self-check (write Growth Log / update behavior corrections) + lint quick check | Before `/clear` |
 | `/capture` | Extract writing material from conversation, lands in current project's `process/` | When the conversation surfaces something worth keeping |
+| `/lint` | Structure self-check: dead links, dead command refs, Problem ≤3, Project anchoring, orphans, missing entry notes | After big structural changes or periodic checkup |
 
 <p align="center">
   <img src="./assets/commands-workflow.png" alt="5 core commands workflow" width="100%">

@@ -19,7 +19,7 @@
 
 ## Why I built this
 
-我从 2026 年 1 月开始构建这套个人 OS。中间**彻底重构过 5 轮**——每次重构都是因为发现"这个结构还不够服务我真正的决策"。到现在用着越来越顺手，所以决定把它开源。
+我从 2026 年 1 月开始构建这套个人 OS。中间**彻底重构过 6 轮**——每次重构都是因为发现"这个结构还不够服务我真正的决策"。到现在用着越来越顺手，所以决定把它开源。
 
 它解决我几个非常实际的问题：
 
@@ -30,7 +30,7 @@
 还有其他——比如自我进化机制、跨项目复用、Problem ≤3 的硬约束等等。完整故事会陆续写出来。
 
 <p align="center">
-  <img src="./assets/why-i-built.png" alt="2026-01 → 2026-05，5 轮重构演化路径" width="85%">
+  <img src="./assets/why-i-built.png" alt="2026-01 → 2026-05，6 轮重构演化路径" width="85%">
 </p>
 
 我每天还在用 HuaSan-LifeOS。lifeos-template 是它的可分享版本。
@@ -134,10 +134,10 @@ lifeos-template/
 ├── 99-Archive/          冷库（AI 默认不读）
 ├── .claude/commands/    5 个核心命令
 │   ├── init-life-os.md       onboarding
-│   ├── go.md                 恢复上下文
-│   ├── today.md              今日聚焦
+│   ├── go.md                 恢复上下文 + 今日判断
 │   ├── save.md               保存进度 + AI 自检
-│   └── capture.md            提取写作素材
+│   ├── capture.md            提取写作素材
+│   └── lint.md               结构自检
 ├── CLAUDE.md            Claude Code 入口
 ├── AGENTS.md            Codex CLI 入口（符号链接 → CLAUDE.md，单一源头）
 └── PROGRESS.md          当前进度（每次 /save 更新）
@@ -150,10 +150,10 @@ lifeos-template/
 | 命令 | 作用 | 何时用 |
 |---|---|---|
 | `/init-life-os` | 4 步访谈生成 Identity + Soul + 占位符替换 | 初始化 vault 之后跑一次 |
-| `/go` | 读 PROGRESS 告诉你今天能继续做什么 | 每次会话开始 |
-| `/today` | 基于 Identity/Soul/PROGRESS 判断今天最值得做的 1-3 件事 | 想要更深一层判断时 |
-| `/save` | 保存进度 + AI 自检（写 Growth Log / 更新行为修正清单） | /clear 前用 |
+| `/go` | 恢复上下文 + 判断今天最该做的 1-3 件事（含"今天不要做"和"最小保底动作"） | 每次会话开始 |
+| `/save` | 保存进度 + AI 自检（写 Growth Log / 更新行为修正清单）+ lint 轻量自检 | /clear 前用 |
 | `/capture` | 从对话中提取写作素材，落到当前项目的 process/ | 对话聊出东西时 |
+| `/lint` | 结构自检：扫死链、命令死引用、Problem ≤3、Project 锚定、孤儿、缺入口笔记 | 结构大改后或定期体检 |
 
 <p align="center">
   <img src="./assets/commands-workflow.png" alt="5 个核心命令工作流" width="100%">

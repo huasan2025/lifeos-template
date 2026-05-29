@@ -203,10 +203,10 @@ description: 4 步访谈引导新用户初始化 lifeos vault（生成 Identity.
 | 命令 | 一句话 |
 |---|---|
 | `/init-life-os` | 首次 onboarding（就是现在跑的这个）。一辈子一次。 |
-| `/go` | 每次会话开始跑。AI 读 `PROGRESS.md` 的'还没做的事'，告诉你今天能继续做什么。 |
-| `/today` | 比 `/go` 更深一层。基于 Identity/Soul/PROGRESS 判断你今天**最该**做的 1-3 件事。 |
-| `/save` | 会话结束前跑。把进度更新到 PROGRESS.md，AI 顺便做自检（学到的写进 Evolution Rules）。 |
+| `/go` | 每次会话开始跑。恢复上下文 + 判断你今天**最该**做的 1-3 件事（含'今天不要做'和'最小保底动作'）。 |
+| `/save` | 会话结束前跑。把进度更新到 PROGRESS.md，AI 顺便做自检（学到的写进 Evolution Rules）+ lint 轻量自检。 |
 | `/capture` | 对话中聊出洞察/转折时跑。提取成 Process Note 落到当前项目的 `process/` 子目录。 |
+| `/lint` | 结构大改后或定期跑。扫死链、命令死引用、Problem ≤3、Project 锚定、孤儿、缺入口笔记，只报告不自动改。 |
 
 如果想删除某个，可以打开 `90-System/Commands.md` 手动改。但 MVP 建议都留着。"
 

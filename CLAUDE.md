@@ -20,10 +20,10 @@
 | 输入示例 | 你必须读取并执行的文件 |
 |---|---|
 | `/init-life-os` / "开始 onboarding" / "初始化我的 lifeos" | `.claude/commands/init-life-os.md` |
-| `/go` / "继续上次的事" / "今天从哪开始" | `.claude/commands/go.md` |
-| `/today` / "今天最该做什么" | `.claude/commands/today.md` |
+| `/go` / "继续上次的事" / "今天从哪开始" / "今天最该做什么" | `.claude/commands/go.md` |
 | `/save` / "保存进度" / "存档" | `.claude/commands/save.md` |
 | `/capture` / "记一下这个洞察" | `.claude/commands/capture.md` |
+| `/lint` / "检查结构" / "有没有死链" / "体检" | `.claude/commands/lint.md` |
 
 不要凭印象执行——每次都重新读对应文件，把它当作完整工作流走一遍。
 
@@ -44,7 +44,7 @@
 02-Problems/     → 长期赌注 / 战略问题，硬性 ≤3
 03-Projects/     → 问题的解决容器（项目过程产物也在这里）
 04-Library/      → 跨项目复用的笔记/经验/思考（type: howto/decode/insight/analysis）
-90-System/       → 系统级机制（CLAUDE.md / Identity.md / Soul.md / Commands.md / PROGRESS-ARCHIVE.md）
+90-System/       → 系统级机制（CLAUDE.md / Identity.md / Soul.md / Commands.md / PROGRESS-ARCHIVE.md / lint-log.md）
 91-Assistant/     → ${ASSISTANT_NAME}的人格 + 自我进化机制
 99-Archive/      → 内容冷库（AI 默认不读）
 ```
